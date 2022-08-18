@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material"
+import { Box, Typography, useMediaQuery } from "@mui/material"
 import { ThemeProvider } from "styled-components"
 import Card from "./components/Card"
 import Projects from "./components/Projects"
@@ -11,11 +11,11 @@ function App() {
       <MainContainer>
         <ChildContainer>
           <Box>
-            <Titles variant={"h5"}>WHO AM I</Titles>
+            <Titles variant={"h5"} textAlign={"center"}>WHO AM I</Titles>
             <Card />
           </Box>
-          <Box width="50%">
-            <Titles variant={"h5"}>GITHUB PINNED PROJECTS</Titles>
+          <Box width="50%" minWidth={"300px"}>
+            <Titles variant={"h5"} textAlign={"center"}>GITHUB PINNED PROJECTS</Titles>
             <Projects />
           </Box>
         </ChildContainer>

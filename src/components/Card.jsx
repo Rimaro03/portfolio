@@ -7,15 +7,14 @@ import { LocationOn } from '@mui/icons-material'
 import { GitHub } from '@mui/icons-material'
 import { Instagram } from '@mui/icons-material'
 import { LinkedIn } from '@mui/icons-material'
-import { WhatsApp } from '@mui/icons-material'
-import { Telegram } from '@mui/icons-material'
+import AvatarImage from "../assets/avatar.jpg"
 
 const Card = () => {
     return (
         <CardContainer>
             <CardHeader />
             <CardAvatar>
-                <Avatar src={"../src/assets/avatar.jpg"} />
+                <Avatar src={AvatarImage} />
             </CardAvatar>
             <CardBody>
                 <Typography variant="h6" sx={{ color: "white", fontWeight: "bold", fontSize: "22px" }}>LEONARDO ONGARO</Typography>

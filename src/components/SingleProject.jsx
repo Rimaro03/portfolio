@@ -2,7 +2,7 @@ import { Bookmarks } from '@mui/icons-material'
 import { Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
-import { ProjectCard } from '../style/components'
+import { ProjectCard, ProjectTitle, ProjectDesc, ProjectLang } from '../style/components'
 
 const SingleProject = (props) => {
     console.log(props.repo.languageColor)
@@ -10,10 +10,10 @@ const SingleProject = (props) => {
         <ProjectCard borderColor={props.repo.languageColor}>
             <Box display={"flex"} >
                 <Bookmarks fontSize='medium' sx={{ marginRight: 2 }} />
-                <Typography variant="body1" fontWeight={"bold"} fontSize={18}>{props.repo.repo.toUpperCase()}</Typography>
+                <ProjectTitle variant="body1">{props.repo.repo.toUpperCase()}</ProjectTitle>
             </Box>
-            <Typography>{props.repo.description}</Typography>
-            <Typography variant="caption">{props.repo.language}</Typography>
+            <ProjectDesc>{props.repo.description}</ProjectDesc>
+            <ProjectLang variant="caption">{props.repo.language}</ProjectLang>
         </ProjectCard>
     )
 }

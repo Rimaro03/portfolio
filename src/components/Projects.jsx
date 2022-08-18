@@ -15,7 +15,7 @@ const Projects = () => {
         <ProjectsContainer container spacing={10}>
             {repos.map((item, index) => {
                 return (
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={6}>
                         <SingleProject repo={item} key={index} />
                     </Grid>
                 )

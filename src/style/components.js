@@ -1,40 +1,46 @@
 import { Grid, Typography } from "@mui/material";
 import { Box, style, styled } from "@mui/system";
+import CardBackground from "../assets/card-background.jpg"
 
-export const MainContainer = styled(Box)(() => ({
+export const MainContainer = styled(Box)(({ theme }) => ({
     backgroundColor: "#151965",
-    height: "100vh",
-    width: "100%",
-    display: "flex",
-    justifyContent: "space-around",
-    margin: 0,
-    padding: 0
+    minHeight: "100%",
 }))
 
-export const ChildContainer = styled(Box)(() => ({
+export const ChildContainer = styled(Box)(({ theme }) => ({
     display: "flex",
-    flexDirection: "horizontal",
-    justifyContent: "space-around",
     alignItems: "center",
-    margin: "auto",
-    width: "100%"
+    justifyContent: "space-around",
+    flexDirection: "row",
+    paddingTop: "10em",
+
+    [theme.breakpoints.down("lg")]: {
+        flexDirection: "column",
+        paddingTop: "1em",
+    }
 }))
 
-export const Titles = styled(Typography)(() => ({
+export const Titles = styled(Typography)(({ theme }) => ({
     color: "white",
     fontWeight: "bold",
     margin: 20,
+
+    [theme.breakpoints.down("lg")]: {
+        fontSize: 20,
+    }
 }))
 
-export const CardContainer = styled(Box)(() => ({
+export const CardContainer = styled(Box)(({ theme }) => ({
     backgroundColor: "#32407B",
     minWidth: "300px",
     height: "530px",
-    borderRadius: "20px"
+    borderRadius: "20px",
+    alignItems: "center",
+    justifyContent: "center",
 }))
 
 export const CardHeader = styled(Box)(() => ({
-    backgroundImage: "url(../src/assets/card-background.jpg)",
+    backgroundImage: `url(${CardBackground})`,
     backgroundSize: "300px",
     backgroundPosition: "0px -70px",
     backgroundRepeat: "no-repeat",
@@ -97,7 +103,8 @@ export const SocialContainer = styled(Box)(() => ({
 }))
 
 export const ProjectsContainer = styled(Grid)(() => ({
-    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
 }))
 
 export const ProjectCard = styled(Box)(({ borderColor }) => ({
@@ -112,3 +119,28 @@ export const ProjectCard = styled(Box)(({ borderColor }) => ({
     justifyContent: "space-between",
 }))
 
+export const ProjectTitle = styled(Typography)(({ theme }) => ({
+    fontWeight: "bold",
+    fontSize: 18,
+
+    [theme.breakpoints.down("lg")]: {
+        fontWeight: "bold",
+        fontSize: 15
+    }
+}))
+
+export const ProjectDesc = styled(Typography)(({ theme }) => ({
+    fontSize: 15,
+
+    [theme.breakpoints.down("lg")]: {
+        fontSize: 13
+    }
+}))
+
+export const ProjectLang = styled(Typography)(({ theme }) => ({
+    fontSize: 12,
+
+    [theme.breakpoints.down("lg")]: {
+        fontSize: 10
+    }
+}))
