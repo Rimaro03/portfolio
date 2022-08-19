@@ -5,9 +5,8 @@ import React from 'react'
 import { ProjectCard, ProjectTitle, ProjectDesc, ProjectLang } from '../style/components'
 
 const SingleProject = (props) => {
-    console.log(props.repo.languageColor)
     return (
-        <ProjectCard borderColor={props.repo.languageColor}>
+        <ProjectCard borderColor={props.repo.languageColor} onClick={() => { window.open(props.repo.link, '_blank') }}>
             <Box display={"flex"} >
                 <Bookmarks fontSize='medium' sx={{ marginRight: 2 }} />
                 <ProjectTitle variant="body1">{props.repo.repo.toUpperCase()}</ProjectTitle>

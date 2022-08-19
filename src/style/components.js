@@ -37,6 +37,10 @@ export const CardContainer = styled(Box)(({ theme }) => ({
     borderRadius: "20px",
     alignItems: "center",
     justifyContent: "center",
+
+    [theme.breakpoints.down("lg")]: {
+        marginBottom: 50
+    }
 }))
 
 export const CardHeader = styled(Box)(() => ({
@@ -102,9 +106,13 @@ export const SocialContainer = styled(Box)(() => ({
     marginRight: "10px",
 }))
 
-export const ProjectsContainer = styled(Grid)(() => ({
+export const ProjectsContainer = styled(Grid)(({ theme }) => ({
     alignItems: "center",
     justifyContent: "center",
+
+    [theme.breakpoints.down("lg")]: {
+        marginBottom: 50
+    }
 }))
 
 export const ProjectCard = styled(Box)(({ borderColor }) => ({
@@ -117,6 +125,9 @@ export const ProjectCard = styled(Box)(({ borderColor }) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    ":hover": {
+        cursor: "pointer"
+    }
 }))
 
 export const ProjectTitle = styled(Typography)(({ theme }) => ({
