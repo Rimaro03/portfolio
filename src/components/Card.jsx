@@ -2,7 +2,7 @@ import { Backdrop, Button, CircularProgress, Icon, IconButton, Typography } from
 import { Box } from '@mui/system'
 import React, { useState } from 'react'
 import { Avatar, Background, ButtonContainer, CardAvatar, CardBody, CardContainer, CardHeader, InfoContainer, SocialContainer } from '../style/components'
-import { Cake } from '@mui/icons-material'
+import { Cake, Mail } from '@mui/icons-material'
 import { LocationOn } from '@mui/icons-material'
 import { GitHub } from '@mui/icons-material'
 import { Instagram } from '@mui/icons-material'
@@ -37,6 +37,10 @@ const Card = () => {
                     <IconButton sx={{ color: "white" }} href={"https://www.instagram.com/ongaroleo"}><Instagram fontSize="large" /></IconButton>
                     <IconButton sx={{ color: "white" }} href={"https://www.linkedin.com/in/leonardo-ongaro-7172a9218"}><LinkedIn fontSize="large" /></IconButton>
                 </SocialContainer>
+                <Box display={"flex"} flexDirection={"row"} color={"white"} marginTop={2} justifyContent={"center"}>
+                    <Mail fontSize='small' />
+                    <Typography paddingLeft={1} variant={"subtitle2"}>leonardo.ongaro.work@gmail.com</Typography>
+                </Box>
             </CardBody>
         </CardContainer>
     )

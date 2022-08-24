@@ -33,7 +33,7 @@ export const Titles = styled(Typography)(({ theme }) => ({
 export const CardContainer = styled(Box)(({ theme }) => ({
     backgroundColor: "#32407B",
     minWidth: "300px",
-    height: "530px",
+    height: "570px",
     borderRadius: "20px",
     alignItems: "center",
     justifyContent: "center",
