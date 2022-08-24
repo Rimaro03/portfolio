@@ -14,7 +14,7 @@ const Card = () => {
         <CardContainer>
             <CardHeader />
             <CardAvatar>
-                <Avatar src={AvatarImage} />
+                <Avatar src={"https://avatars.githubusercontent.com/u/57857328?s=400&u=e5f5476d5ede405117cdfa1e946cf996f56a79a6&v=4"} />
             </CardAvatar>
             <CardBody>
                 <Typography variant="h6" sx={{ color: "white", fontWeight: "bold", fontSize: "22px" }}>LEONARDO ONGARO</Typography>

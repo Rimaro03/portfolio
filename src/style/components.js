@@ -69,8 +69,8 @@ export const Avatar = styled("img")(() => ({
     position: "relative",
     top: "-50px",
     borderRadius: "50%",
-    width: "80px",
-    height: "80px"
+    width: "100px",
+    height: "auto"
 }))
 
 export const Background = styled("img")(() => ({
